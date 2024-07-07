@@ -1,0 +1,72 @@
+@media screen and (max-width: 1140px) {
+    .films__cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .collections_cards {
+        overflow-x: auto;
+    }
+    .collections_cards::-webkit-scrollbar {
+        height: 0;
+    }
+
+}
+
+@media screen and (max-width: 765px) {
+    nav {
+        padding: 20px 0;
+    }
+
+
+    .nav__list {
+        display: none;
+    }
+
+    .nav__menu {
+        width: 45px;
+        height: 45px;
+        background: #c3c4c4c4;
+        position: relative;
+        border-radius: 5px;
+        padding-left: 2px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .nav__line {
+        width: 40px;
+        height: 2px;
+        background: var(--white);
+        position: absolute;
+        transition: 500ms;
+    }
+
+    .nav__line:nth-of-type(2) {
+        transform: translateY(-10px);
+        width: 30px;
+    }
+
+    .nav__line:nth-of-type(3) {
+        transform: translateY(10px);
+        width: 20px;
+    }
+
+    .nav__menu:hover .nav__line:nth-of-type(2) {
+        transform: rotate(45deg);
+        width: 40px;
+    }
+    .nav__menu:hover .nav__line:nth-of-type(3) {
+        transform: translateY(0) rotate(315deg);
+        transition-delay: .25s;
+        width: 40px;
+    }
+    .nav__menu:hover .nav__line:first-of-type {
+        transform: translateX(150%);
+        transition-delay: .125s;
+        width: 40px;
+    }
+
+}
